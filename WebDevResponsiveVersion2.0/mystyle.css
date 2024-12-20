@@ -1,0 +1,683 @@
+/* Global Styles */
+body {
+  font-family: "Roboto Condensed";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #e6e8ed 0%, #cdd3d4 100%);
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Container {
+  max-width: 1526px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Header Styles */
+header {
+  background: transparent;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: -40px;
+  z-index: 1000;
+}
+
+nav .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo img {
+  width: 30%;
+  margin-left: 70px;
+  padding-top: 20px;
+}
+
+nav .menu-toggle {
+  display: none;
+  padding-right: 40px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #060505;
+}
+
+nav .nav-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: auto;
+}
+
+nav .nav-menu li a {
+  font-size: 1.25rem;
+  color: #060506;
+  font-weight: bold;
+  padding: 30px 30px;
+}
+
+nav .nav-menu li a:hover {
+  color: #7843e9;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) and (min-width: 375px) {
+  nav .menu-toggle {
+    display: block;
+    justify-content: center;
+    margin-top: -4%;
+  }
+
+  nav .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: transparent;
+    width: 50%;
+    position: absolute;
+    top: 60px;
+    right: -12%;
+    z-index: 1000;
+  }
+
+  nav .nav-menu.active {
+    display: flex;
+  }
+
+  nav .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav .nav-menu li a {
+    font-size: 1rem;
+    padding: 15px;
+    display: block;
+    font-size: 15px;
+  }
+
+  nav .nav-menu li .dropdown {
+    position: fixed;
+  }
+
+  nav .nav-menu li .dropdown li a {
+    padding: 19px;
+    background: #555;
+  }
+}
+
+/* Home Section */
+#Home {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.Homies {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 90vh;
+  text-align: justify;
+  color: black;
+  padding: 80px 0;
+  padding-top: 45px;
+}
+
+.IntroHome p {
+  font-size: 2.2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.Marix {
+  font-size: 47px;
+  font-weight: bold;
+  color: #7843e9;
+}
+
+.Tech {
+  width: 20%;
+  height: auto;
+}
+
+.buttonsContainer {
+  margin: 10px 0;
+}
+
+.Me {
+  color: #7843e9;
+}
+
+.HomeButton1,
+.HomeButton2 {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.HomeButton1 {
+  background: #7843e9;
+  color: white;
+}
+
+.HomeButton1:hover {
+  box-shadow: 2px 4px 5px #060606;
+  transform: scale(1.1);
+}
+
+.HomeButton2 {
+  background: transparent;
+  color: black;
+  border: 2px solid #7843e9;
+}
+
+.HomeButton2:hover {
+  box-shadow: 2px 4px 5px #060606;
+  transform: scale(1.1);
+}
+
+/* Social Icons */
+.Socials {
+  display: flex;
+  justify-content: center;
+  margin-top: -90px;
+  gap: 20px;
+}
+
+.Socials a {
+  margin: 0 1px;
+  font-size: 30px;
+  color: black;
+  padding-top: -90px;
+}
+
+.Socials a:hover {
+  transform: scale(1.5);
+  transition: 0.1s;
+}
+
+/* About Section */
+#About {
+  padding: 50px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #e6e8ed 0%, #cdd3d4 100%);
+}
+
+.ImgContainerAboutMe {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.ImgContainerAboutMe img {
+  width: 250px;
+  max-height: 250px;
+  object-fit: cover;
+  object-fit: cover;
+  border: 2px solid black;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Info {
+  padding: 0 15px;
+}
+
+.InfoAboutMe,
+.MySkills {
+  margin-bottom: 20px;
+  padding-left: 20%;
+  justify-content: center;
+  width: 60%;
+  text-align: justify;
+}
+
+.MySkills h3 {
+  line-height: 1.6;
+}
+
+/* Services Section */
+#Services {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+  background: linear-gradient(135deg, #e6e8ed 0%, #cdd3d4 100%);
+  padding: 130px 0;
+}
+
+.ServicesPage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  text-align: center;
+}
+
+.column {
+  flex: 1 1 calc(33% - 60px);
+  box-shadow: 0 2px 6px #7843e9;
+  border-radius: 8px;
+  height: 60vh;
+  padding: 20px;
+  background: white;
+  transition: transform 0.1s;
+}
+
+.column:hover {
+  transform: scale(1.1);
+}
+
+.column h4 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #7843e9;
+}
+
+.card {
+  background: transparent;
+  padding: 5px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Contact Section */
+#Contact {
+  padding: 50px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #e6e8ed 0%, #cdd3d4 100%);
+}
+
+.ContactPage form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding-top: 5%;
+}
+
+.ContactPage input,
+.ContactPage textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.ContactPage input:focus,
+.ContactPage textarea:focus {
+  border-color: #7843e9;
+  outline: none;
+}
+
+.ContactPageButton {
+  padding: 10px 20px;
+  background: transparent;
+  color: black;
+  border: 2px solid #7843e9;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ContactPageButton:hover {
+  box-shadow: 2px 4px 5px #060606;
+  transform: scale(1.1);
+}
+.Info_Contact {
+  font-size: 1.3rem;
+}
+.contacts {
+  font-size: 1.5rem;
+}
+.MySocials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.MySocials a {
+  font-size: 1.9rem;
+}
+.MySocials a:hover {
+  transform: scale(1.5);
+  transition: 0.1s;
+}
+
+/* Footer */
+footer {
+  background-img: url(wave.svg);
+  color: black;
+  padding: 20px 0px;
+  text-align: right;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 1245px) {
+  .Container {
+    max-width: 100%;
+  }
+
+  nav .logo img {
+    width: 50%;
+    margin-left: 20px;
+  }
+
+  nav .nav-menu {
+    margin-left: auto;
+  }
+
+  .Homies {
+    flex-direction: row;
+    text-align: justify;
+    padding-top: 50px;
+  }
+  #Home.Socials {
+    flex-direction: row;
+    margin-top: 90px;
+    gap: 10px;
+  }
+
+  .IntroHome p {
+    font-size: 1.4rem;
+  }
+
+  .Marix {
+    font-size: 1.5rem;
+  }
+
+  .Tech {
+    width: 30%;
+  }
+
+  .InfoAboutMe,
+  .MySkills {
+    width: 80%;
+    padding-left: 90px;
+  }
+
+  .ImgContainerAboutMe {
+    margin-top: 70px;
+  }
+
+  #Services {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+
+  #Services {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    padding: 130px 0;
+  }
+
+  .column {
+    flex: 1 1 100%;
+    height: auto;
+    text-align: center;
+    padding-left: 40px;
+  }
+
+  .ContactPage form {
+    margin-top: 90px;
+  }
+}
+@media (max-width: 1024px) {
+  .Container {
+    max-width: 90%;
+  }
+  header {
+    background: transparent;
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: -5%;
+    z-index: 1000;
+  }
+
+  nav .logo img {
+    width: 26%;
+    margin-left: 20px;
+  }
+
+  nav .nav-menu {
+    margin-left: auto;
+  }
+
+  .Homies {
+    flex-direction: row;
+    text-align: justify;
+    padding-top: 50px;
+  }
+  .Socials {
+    flex-direction: row;
+    margin-top: -90px;
+    gap: 10px;
+  }
+
+  .IntroHome p {
+    font-size: 28px;
+  }
+
+  .Marix {
+    font-size: 38px;
+  }
+
+  .Tech {
+    width: 30%;
+  }
+
+  .InfoAboutMe,
+  .MySkills {
+    width: 80%;
+    padding-left: 90px;
+  }
+
+  .ImgContainerAboutMe {
+    margin-top: 70px;
+  }
+
+  #Services {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+
+  #Services {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    padding: 130px 0;
+  }
+
+  .column {
+    flex: 1 1 100%;
+    height: auto;
+    text-align: center;
+    padding-left: 40px;
+  }
+
+  .ContactPage form {
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Container {
+    max-width: 95%;
+  }
+
+  nav .logo img {
+    width: 25%;
+  }
+  nav .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: transparent;
+    width: 50%;
+    position: absolute;
+    top: 60px;
+    right: -18%;
+    z-index: 1000;
+  }
+
+  .Homies {
+    padding: 120px 0;
+    flex-direction: row;
+  }
+
+  .IntroHome p {
+    font-size: 1.5rem;
+  }
+
+  .Marix {
+    font-size: 2.3rem;
+  }
+
+  .Tech {
+    width: 40%;
+  }
+
+  .Socials {
+    flex-direction: row;
+    margin-top: 0;
+    gap: 10px;
+  }
+  .Socials a {
+    font-size: 25px;
+  }
+
+  .ImgContainerAboutMe {
+    margin-top: 70px;
+  }
+
+  .ImgContainerAboutMe img {
+    width: 210px;
+    height: 210px;
+  }
+
+  .InfoAboutMe,
+  .MySkills {
+    width: 70%;
+    font-size: 1rem;
+    padding-left: 90px;
+  }
+
+  #Services {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    padding: 130px 0;
+  }
+
+  .ContactPage input,
+  .ContactPage textarea {
+    max-width: 70%;
+  }
+  .ContactPage form {
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav .logo img {
+    width: 30%;
+  }
+  nav .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    width: 50%;
+    position: absolute;
+    top: 60px;
+    right: -13%;
+    z-index: 1000;
+  }
+
+  .IntroHome p {
+    text-align: justify;
+    font-size: 1.5rem;
+    margin-top: 2%;
+  }
+  .Homies {
+    flex-direction: column;
+  }
+
+  .Marix {
+    font-size: 2.5rem;
+  }
+
+  .Tech {
+    width: 30%;
+    margin-top: 19%;
+  }
+  .Socials {
+    flex-direction: row;
+    margin-top: 0;
+    gap: 10px;
+  }
+  .Socials a {
+    font-size: 19px;
+  }
+
+  .ImgContainerAboutMe {
+    margin-top: 70px;
+  }
+
+  .ImgContainerAboutMe img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .InfoAboutMe,
+  .MySkills {
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 8px;
+  }
+
+  #Services {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3px;
+    padding: 130px 0;
+  }
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  .ContactPage input,
+  .ContactPage textarea {
+    max-width: 90%;
+  }
+
+  .ContactPage form {
+    margin-top: 90px;
+  }
+
+  .ContactPageButton {
+    width: 20%;
+  }
+}
